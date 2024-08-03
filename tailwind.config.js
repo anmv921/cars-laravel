@@ -23,6 +23,7 @@ module.exports = {
         './resources/**/*.php',
         './resources/**/*.vue',
         './resources/**/*.twig',
+        "./resources/**/*.blade.php"
     ],
     plugins: [
         require('@tailwindcss/forms'),
