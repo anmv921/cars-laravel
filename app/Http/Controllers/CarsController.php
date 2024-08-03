@@ -15,17 +15,6 @@ class CarsController extends Controller
     {
         $cars = Car::all();
 
-        // $cars = Car::where('name', '=', 'Audi')
-        // ->get();
-
-        // $cars = Car::chunk(2, function($cars) {
-        //     foreach ($cars as $car) {
-        //         print_r($car);
-        //     }
-        // });
-        
-        // dd($cars);
-
         return view("cars.index", [
             'cars' => $cars
         ]);
@@ -44,11 +33,6 @@ class CarsController extends Controller
      */
     public function store(Request $request)
     {
-        // $car = new Car;
-        // $car->name = $request->input("name");
-        // $car->founded = $request->input("founded");
-        // $car->description = $request->input("description");
-        // $car->save();
 
         $car = Car::create([
             'name' => $request->input("name"),
@@ -64,7 +48,9 @@ class CarsController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $car = Car::find($id);
+
+        return view('cars.show')->with('car', $car);
     }
 
     /**
@@ -72,7 +58,7 @@ class CarsController extends Controller
      */
     public function edit(string $id)
     {   
-        $car = Car::find($id)->first();
+        $car = Car::find($id);
 
         return view("cars.edit")->with("car", $car);
     }
@@ -102,3 +88,23 @@ class CarsController extends Controller
         return redirect()->route('cars.index');
     }
 }
+
+// $cars = Car::where('name', '=', 'Audi')
+// ->get();
+
+// $cars = Car::chunk(2, function($cars) {
+//     foreach ($cars as $car) {
+//         print_r($car);
+//     }
+// });
+
+// dd($cars);
+
+// ->toJson();
+// $cars = json_decode($cars);
+
+// $car = new Car;
+// $car->name = $request->input("name");
+// $car->founded = $request->input("founded");
+// $car->description = $request->input("description");
+// $car->save();
