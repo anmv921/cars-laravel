@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Car;
+use App\Models\Product;
+
 use Illuminate\Support\Facades\Route;
+
+use App\Rules\Uppercase;
 
 class CarsController extends Controller
 {
@@ -14,9 +18,6 @@ class CarsController extends Controller
     public function index()
     {
         $cars = Car::all();
-
-        
-
         return view("cars.index", [
             'cars' => $cars
         ]);
@@ -36,12 +37,17 @@ class CarsController extends Controller
     public function store(Request $request)
     {
 
+        $request->validate([
+            'name' => ['required', 'unique:cars', new Uppercase],
+            'founded' => 'required|integer|min:0|max:2021',
+            'description' => 'required'
+        ]);
+
         $car = Car::create([
             'name' => $request->input("name"),
             'founded' => $request->input("founded"),
             'description' => $request->input("description")
         ]);
-
         return redirect()->route('cars.index');
     }
 
@@ -60,6 +66,8 @@ class CarsController extends Controller
     public function edit(string $id)
     {   
         $car = Car::find($id);
+
+        $products = Product::find($id);
 
         return view("cars.edit")->with("car", $car);
     }
