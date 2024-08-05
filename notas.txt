@@ -1,0 +1,7 @@
+php artisan make:model Product --migration
+or
+php artisan make:model Product -m
+
+---------------------------------
+
+php artisan migrate
