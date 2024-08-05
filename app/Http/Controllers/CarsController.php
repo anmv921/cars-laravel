@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Rules\Uppercase;
 
+use App\Http\Requests\CreateValidationRequest;
+
 class CarsController extends Controller
 {
     /**
@@ -34,20 +36,49 @@ class CarsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    // CreateValidationRequest $request,
+    public function store( Request $request )
     {
+        // $request->validated();
+        // dd($request->all());
+
+        // Methods we can use on $request
+        // guessExtension()
+        // getMimeType()
+        // store()
+        // asStore()
+        // storePublicly()
+        // move()
+        // getClientOriginalName()
+        // guessClientExtension()
+        // getSize()
+        // getError()
+
+        // $test = $request->file('image')->guessExtension();
+        // $test = $request->file('image')->getClientOriginalName();
+        // dd($test);
 
         $request->validate([
-            'name' => ['required', 'unique:cars', new Uppercase],
+            'name' => 'required',
             'founded' => 'required|integer|min:0|max:2021',
-            'description' => 'required'
+            'description' => 'required',
+            'image' => 'required|mimes:jpg,png,jpeg|max:5048'
         ]);
+
+        $newImageName = time() . '-' . $request->name 
+            . '.' . $request->image->extension();
+
+        // dd($newImageName);
+
+        $request->image->move(public_path('images'), $newImageName);
 
         $car = Car::create([
             'name' => $request->input("name"),
             'founded' => $request->input("founded"),
-            'description' => $request->input("description")
+            'description' => $request->input("description"),
+            'image_path' => $newImageName
         ]);
+        
         return redirect()->route('cars.index');
     }
 
@@ -75,8 +106,10 @@ class CarsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(CreateValidationRequest $request, string $id)
     {
+        $request->validated();
+
         $car = Car::where("id", $id)
         ->update([
             'name' => $request->input("name"),
@@ -117,3 +150,9 @@ class CarsController extends Controller
 // $car->founded = $request->input("founded");
 // $car->description = $request->input("description");
 // $car->save();
+
+// $request->validate([
+//     'name' => ['required', 'unique:cars', new Uppercase],
+//     'founded' => 'required|integer|min:0|max:2021',
+//     'description' => 'required'
+// ]);
