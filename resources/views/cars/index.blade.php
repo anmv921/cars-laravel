@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+<header>
+    @include('layouts.header')
+</header>
+
 @section('content')
     <div class="m-auto w-4/5 py-24" >
 

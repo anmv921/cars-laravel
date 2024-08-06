@@ -1,18 +1,25 @@
 @extends('layouts.app')
 
+
+<header>
+    @include('layouts.header')
+</header>
+
 @section('content')
 
-    <div class="text-center">
-        <a 
-        class="border-b-2 pb-2 border-dotted italic text-gray-500"
-        href="{{ url('/') . '/cars' }}" >
-            Go back &larr; 
-        </a>
-    </div>
-
-   
+    <div class="py-24">
 
     <div class="text-center" >
+
+        <div class="text-center">
+            <a 
+            class="border-b-2 pb-2 border-dotted italic text-gray-500"
+            href="{{ url('/') . '/cars' }}" >
+                Go back &larr; 
+            </a>
+        </div>
+
+        <br>
 
         <div class ="flex justify-center">
             <img 
@@ -41,7 +48,6 @@
                 Models:
             </p>
 
-            {{-- Table of models and engines --}}
             <table class="table-auto" >
                 <tr class="bg-blue-100">
                     <th class="w-1/2 border-4 border-gray-500">
@@ -105,5 +111,7 @@
 
             <hr class="mt-4 mb-8" >
     </div>
+
+</div>
 
 @endsection

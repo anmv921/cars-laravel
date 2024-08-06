@@ -1,9 +1,22 @@
 @extends('layouts.app')
 
+<header>
+    @include('layouts.header')
+</header>
+
 @section('content')
 
-    <br>
+    
 
+    <div class="m-auto w-4/5 py-24">
+
+        <div class="text-center">
+            <h1 class="text-5xl uppercase bold">
+                Create car
+            </h1>
+        </div>
+
+        <br>
     <div class="text-center">
         <a 
         class="border-b-2 pb-2 border-dotted italic text-gray-500"
@@ -11,14 +24,6 @@
             Go back &larr; 
         </a>
     </div>
-
-    <div class="m-auto w-4/5 py-2">
-
-        <div class="text-center">
-            <h1 class="text-5xl uppercase bold">
-                Create car
-            </h1>
-        </div>
       
         <div class="flex justify-center pt-20" >
             <form action="/cars" method="POST" 
