@@ -9,3 +9,24 @@ php artisan make:rule Uppercase
 php artisan make:request CreateValidationRequest
 
 in ValidationRequest file authorize needs to be set to true
+
+----------------
+php artisan list
+
+php artisan clear-compiled
+
+php artisan down
+
+php artisan up 
+
+php artisan env
+
+php artisan help
+
+php artisan --version
+
+php artisan --env
+
+php artisan optimize
+
+php artisan cache:clear
