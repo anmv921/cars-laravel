@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 <header>
     @include('layouts.header')
 </header>
