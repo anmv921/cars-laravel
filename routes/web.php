@@ -22,14 +22,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-// Route::get('/cars', CarsController::class)->name('index');
-
-
-
 Route::view('/', 'welcome')->name('home');
-
-// Auth routes from tall stack
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)

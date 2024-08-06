@@ -13,41 +13,52 @@
             </h1>
         </div>
 
-        <div class="pt-10" >
-            <a 
-            href="/cars/create"
-            class="border-b-2 pb-2 border-dotted italic text-gray-500" >
-                Add a new car &rarr;
-            </a>
-        </div>
-    
+        @if ( Auth::user() )
+            <div class="pt-10" >
+                <a 
+                href="/cars/create"
+                class="border-b-2 pb-2 border-dotted italic text-gray-500" >
+                    Add a new car &rarr;
+                </a>
+            </div>
+        @else
+            <p class="py-12 italic" >
+                Please login to a add a new car.
+            </p>
+        @endif
+
         <div class="5/6 py-10" >
 
             @foreach ($cars as $car)
 
-                <div class="float-right" >
-                    <a 
-                    class="border-b-2 pb-2 border-dotted italic text-green-500"
+                @if ( 
+                    isset( Auth::user()->id ) && 
+                    $car->user_id == Auth::user()->id )
 
-                    href="cars/{{ $car->id }}/edit" >
-                        Edit &rarr; 
-                    </a>
+                    <div class="float-right" >
+                        <a 
+                        class="border-b-2 pb-2 border-dotted italic text-green-500"
 
-                    <form
-                    class="pt-3"
-                    method="POST" 
+                        href="cars/{{ $car->id }}/edit" >
+                            Edit &rarr; 
+                        </a>
 
-                    action="/cars/{{ $car->id }}" >
-                        @csrf
-                        @method('delete')
+                        <form
+                        class="pt-3"
+                        method="POST" 
 
-                        <button 
-                        class="border-b-2 pb-2 border-dotted italic text-red-500"
-                        type="submit">
-                            Delete &rarr; 
-                        </button>
-                    </form>
-                </div>
+                        action="/cars/{{ $car->id }}" >
+                            @csrf
+                            @method('delete')
+
+                            <button 
+                            class="border-b-2 pb-2 border-dotted italic text-red-500"
+                            type="submit">
+                                Delete &rarr; 
+                            </button>
+                        </form>
+                    </div>
+                @endif
 
                 <div class="m-auto">
                     <span class="uppercase text-blue-500 font-bold text-xs italic">
