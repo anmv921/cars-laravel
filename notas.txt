@@ -38,3 +38,7 @@ php artisan key:generate
 php artisan session:table
 
 php vartisan view:clear
+
+php artissan route:list
+
+php artisan route:clear

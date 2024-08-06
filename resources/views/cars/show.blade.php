@@ -10,14 +10,16 @@
         </a>
     </div>
 
+   
+
     <div class="text-center" >
 
-            <div id="div-img-car">
-                <img 
-                class="w-6/12 mb-8 shadow-xl"
-                src="{{ asset('images/' . $car->image_path) }}" 
-                alt="" >
-            </div>
+        <div class ="flex justify-center">
+            <img 
+            class="w-6/12 mb-8 shadow-xl"
+            src="{{ asset('images/' . $car->image_path) }}" 
+            alt="" >
+        </div>
             
         <h1 class="text-5xl uppercase bold" >
             {{ $car->name }}
@@ -25,9 +27,6 @@
     </div>
 
     <div class="py-10 text-center" >
-
-
-
             <div class="m-auto">
                 <span class="uppercase text-blue-500 font-bold text-xs italic">
                     Founded: {{ $car->founded }}
