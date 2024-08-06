@@ -30,3 +30,11 @@ php artisan --env
 php artisan optimize
 
 php artisan cache:clear
+
+php artisan auth:clear-resets
+
+php artisan key:generate
+
+php artisan session:table
+
+php vartisan view:clear
