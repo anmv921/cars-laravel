@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/cars', CarsController::class)->name('index');
 
-Route::resource('/cars', CarsController::class);
+
 
 Route::view('/', 'welcome')->name('home');
 
@@ -59,7 +59,8 @@ Route::middleware('auth')->group(function () {
         ->middleware('signed')
         ->name('verification.verify');
 
-    Route::post('logout', LogoutController::class)
+    Route::get('logout', LogoutController::class)
         ->name('logout');
 });
 
+Route::resource('/cars', CarsController::class);

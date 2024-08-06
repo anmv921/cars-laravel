@@ -54,7 +54,8 @@ class CarsController extends Controller
             'name' => $request->input("name"),
             'founded' => $request->input("founded"),
             'description' => $request->input("description"),
-            'image_path' => $newImageName
+            'image_path' => $newImageName,
+            'user_id' => auth()->user()->id
         ]);
         
         return redirect()->route('cars.index');

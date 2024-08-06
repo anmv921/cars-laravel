@@ -17,7 +17,8 @@ class Car extends Model
         'name',
         'founded',
         'description',
-        'image_path'
+        'image_path',
+        'user_id'
     ];
 
     protected $hidden = ['updated_at'];

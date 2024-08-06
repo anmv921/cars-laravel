@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=376vZ1wNYPA&t=21625s
+
 php artisan make:model Product --migration
 or
 php artisan make:model Product -m
@@ -42,3 +44,6 @@ php vartisan view:clear
 php artissan route:list
 
 php artisan route:clear
+
+TODO top header with login, logout buttons and user name if logged in
+i will never do this actually
