@@ -5,3 +5,7 @@ php artisan make:model Product -m
 php artisan migrate
 
 php artisan make:rule Uppercase
+
+php artisan make:request CreateValidationRequest
+
+in ValidationRequest file authorize needs to be set to true

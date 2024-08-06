@@ -2,6 +2,14 @@
 
 @section('content')
 
+    <div class="text-center">
+        <a 
+        class="border-b-2 pb-2 border-dotted italic text-gray-500"
+        href="{{ url('/') . '/cars' }}" >
+            Go back &larr; 
+        </a>
+    </div>
+
     <div class="text-center" >
 
             <div id="div-img-car">
@@ -11,15 +19,14 @@
                 alt="" >
             </div>
             
-
-        
-
         <h1 class="text-5xl uppercase bold" >
             {{ $car->name }}
         </h1>
     </div>
 
     <div class="py-10 text-center" >
+
+
 
             <div class="m-auto">
                 <span class="uppercase text-blue-500 font-bold text-xs italic">
@@ -63,7 +70,8 @@
                             </td>
 
                             <td class="border-4 border-gray-500" >
-                                {{ date("d-m-Y", strtotime($car->productionDate->created_at)) }}
+                                {{ date("d-m-Y", 
+                                strtotime($car->productionDate->created_at)) }}
                             </td>
 
                         </tr>
@@ -90,7 +98,7 @@
                         $contador += 1;
                     @endphp
                 @empty
-                    <p>
+                    <p class="text-left">
                         No car products
                     </p>
                 @endforelse

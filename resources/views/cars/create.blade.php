@@ -1,7 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="m-auto w-4/5 py-24">
+
+<br>
+
+<div class="text-center">
+    <a 
+    class="border-b-2 pb-2 border-dotted italic text-gray-500"
+    href="{{ url('/') . '/cars' }}" >
+        Go back &larr; 
+    </a>
+</div>
+
+
+    <div class="m-auto w-4/5 py-2">
 
         <div class="text-center">
             <h1 class="text-5xl uppercase bold">

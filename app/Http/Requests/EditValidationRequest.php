@@ -3,10 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
 use App\Rules\Uppercase;
 
-class CreateValidationRequest extends FormRequest
+class EditValidationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +23,7 @@ class CreateValidationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'unique:cars', new Uppercase],
+            'name' => ['required', new Uppercase],
             'founded' => 'required|integer|min:0|max:2021',
             'description' => 'required',
             'image' => 'required|mimes:jpg,png,jpeg|max:5048'
