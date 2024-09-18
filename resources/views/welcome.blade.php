@@ -106,7 +106,9 @@
                         </a>
                     @endif
                 @endauth
+
             </div>
+            
         @endif
 
         

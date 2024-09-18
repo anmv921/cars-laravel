@@ -6,8 +6,6 @@
 
 @section('content')
 
-    
-
     <div class="m-auto w-4/5 py-24">
 
         <div class="text-center">
@@ -17,11 +15,12 @@
         </div>
 
         <br>
+        
     <div class="text-center">
         <a 
         class="border-b-2 pb-2 border-dotted italic text-gray-500"
         href="{{ url('/') . '/cars' }}" >
-            Go back &larr; 
+            &larr; Go back
         </a>
     </div>
       

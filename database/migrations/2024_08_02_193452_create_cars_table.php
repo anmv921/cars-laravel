@@ -29,7 +29,6 @@ return new class extends Migration
                 ->on('cars')
                 ->onDelete('cascade');
         });
-
     }
 
     /**

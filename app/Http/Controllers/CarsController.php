@@ -81,8 +81,6 @@ class CarsController extends Controller
      */
     public function edit(string $id)
     {   
-
-
         $car = Car::find($id);
 
         return view("cars.edit")->with("car", $car);
