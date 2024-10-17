@@ -14,15 +14,17 @@
             </h1>
         </div>
 
+        
+
         <br>
         
-    <div class="text-center">
-        <a 
-        class="border-b-2 pb-2 border-dotted italic text-gray-500"
-        href="{{ url('/') . '/cars' }}" >
-            &larr; Go back
-        </a>
-    </div>
+        <div class="text-center">
+            <a 
+            class="border-b-2 pb-2 border-dotted italic text-gray-500"
+            href="{{ url('/') . '/cars' }}" >
+                &larr; Go back
+            </a>
+        </div>
       
         <div class="flex justify-center pt-20" >
             <form action="/cars" method="POST" 
@@ -64,6 +66,7 @@
             </form>
 
         </div>
+
             @if ($errors->any())
                 <div class="w-4/8 m-auto text-center">
                     @foreach ($errors->all() as $error)
@@ -73,6 +76,7 @@
                     @endforeach
                 </div>
             @endif
+            
     </div>
 
 @endsection

@@ -1,49 +1,50 @@
 https://www.youtube.com/watch?v=376vZ1wNYPA&t=21625s
 
+***
 php artisan make:model Product --migration
 or
 php artisan make:model Product -m
 
+***
 php artisan migrate
-
 php artisan make:rule Uppercase
-
 php artisan make:request CreateValidationRequest
 
+***
 in ValidationRequest file authorize needs to be set to true
 
-----------------
-php artisan list
+***
+------------------------------|
+Useful commands:              |
+php artisan list              |
+php artisan clear-compiled    |
+php artisan down              |
+php artisan up                |
+php artisan env               |
+php artisan help              |
+php artisan --version         |
+php artisan --env             |
+php artisan optimize          |
+php artisan cache:clear       |
+php artisan auth:clear-resets |
+php artisan key:generate      |
+php artisan session:table     |
+php vartisan view:clear       |
+php artissan route:list       |
+php artisan route:clear       |
+------------------------------|
 
-php artisan clear-compiled
+***
+TODO top header with: 
+- login, 
+- logout buttons 
+- user name if logged in
+- i will never do this actually
 
-php artisan down
-
-php artisan up 
-
-php artisan env
-
-php artisan help
-
-php artisan --version
-
-php artisan --env
-
-php artisan optimize
-
-php artisan cache:clear
-
-php artisan auth:clear-resets
-
-php artisan key:generate
-
-php artisan session:table
-
-php vartisan view:clear
-
-php artissan route:list
-
-php artisan route:clear
-
-TODO top header with login, logout buttons and user name if logged in
-i will never do this actually
+***
+-----------------------------------|
+To run:                            |
+npm run dev -> compiles the styles |
+and in another terminal            |
+php artisan serve --port=9999      |
+-----------------------------------|
