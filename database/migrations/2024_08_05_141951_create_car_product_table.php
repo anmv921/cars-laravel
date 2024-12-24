@@ -12,10 +12,11 @@ return new class extends Migration
     public function up(): void
     {   
         
-        if (!Schema::hasTable('users')) {
+        if (!Schema::hasTable('car_product')) {
+
             Schema::create('car_product', function (Blueprint $table) {
-                $table->integer('car_id');
-                $table->integer('product_id');
+                $table->unsignedInteger('car_id');
+                $table->unsignedInteger('product_id');
 
                 $table->foreign('car_id')
                     ->references('id')
@@ -26,6 +27,9 @@ return new class extends Migration
                     ->references('id')
                     ->on('products')
                     ->onDelete('cascade');
+
+
+
             }); // End Schema::create
         } // End if
     }

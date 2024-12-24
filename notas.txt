@@ -1,12 +1,27 @@
+Tutorial page:
+
 https://www.youtube.com/watch?v=376vZ1wNYPA&t=21625s
 
+--------------------------------------------------------------------------------
+
+In order to set up the project we need to run:
+
+composer install
+
+--------------------------------------------------------------------------------
+
 ***
+To create or update tables we run:
+php artisan migrate
+
+--------------------------------------------------------------------------------
+
+***
+To make a model we run:
 php artisan make:model Product --migration
 or
 php artisan make:model Product -m
 
-***
-php artisan migrate
 php artisan make:rule Uppercase
 php artisan make:request CreateValidationRequest
 
@@ -42,9 +57,18 @@ TODO top header with:
 - i will never do this actually
 
 ***
+
+--------------------------------------------------------------------------------
+
+need to run:
+ npm install
 -----------------------------------|
 To run:                            |
 npm run dev -> compiles the styles |
 and in another terminal            |
 php artisan serve --port=9999      |
 -----------------------------------|
+
+php artisan key:generate
+
+php artisan config:cache
