@@ -43,11 +43,11 @@
                 {{ $car->description }}
             </p>
 
-            <p class="text-lg text-gray-700 py-3">
+            <p class="text-lg text-gray-700 py-2">
                 Models:
             </p>
 
-            <table class="table-auto" >
+            <table class="table-auto w-1/2 m-auto" >
                 <tr class="bg-blue-100">
                     <th class="w-1/2 border-4 border-gray-500">
                         Model
@@ -68,14 +68,19 @@
                             <td class="border-4 border-gray-500" >
                                 @foreach ($car->engines as $engine)
                                     @if ($model->id == $engine->model_id)
-                                        {{ $engine->engine_name }}
+
+                                        {{ $engine->engine_name }} 
+
+                                        <br>
+
+
                                     @endif
                                 @endforeach
                             </td>
 
                             <td class="border-4 border-gray-500" >
                                 {{ date("d-m-Y", 
-                                strtotime($car->productionDate->created_at)) }}
+                                    strtotime($car->created_at)) }}
                             </td>
 
                         </tr>
@@ -90,7 +95,7 @@
             @php
                 $contador = 0;
             @endphp
-            <p class="text-left" >
+            <p class="text-left w-1/2 m-auto" >
                 Product types:
                 @forelse ($car->products as $product)
                     {{ $product->name }}

@@ -1,9 +1,9 @@
-    {{-- ********** --}}
+{{-- ********** --}}
 {{-- Top header --}}
 {{-- ********** --}}
 @if (Route::has('login'))
 <div 
-class="p-6 text-right sm:fixed sm:top-0 sm:right-0" >
+class="p-6 text-right sm:fixed sm:top-0 sm:right-0 bg-white w-screen" >
     @auth
         <a href="{{ route('home') }}" 
         class="font-semibold 
@@ -18,7 +18,7 @@ class="p-6 text-right sm:fixed sm:top-0 sm:right-0" >
             Home
         </a>
 
-        <a href="{{ url('/') . '/cars'  }}" 
+        <a href="{{ url('/') . '/cars' }}" 
         class="ml-4 
         font-semibold 
         text-gray-600 

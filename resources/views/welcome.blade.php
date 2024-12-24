@@ -18,8 +18,6 @@
     selection:bg-indigo-500 
     selection:text-white">
 
-
-  
     @if (Route::has('login'))
             <div class="p-6 text-right sm:fixed sm:top-0 sm:right-0">
                 @auth
@@ -115,7 +113,7 @@
 
    
 
-        <svg class="w-auto h-16 text-indigo-600 bg-gray-100 dark:bg-gray-900" 
+        <svg class="w-auto h-16 text-indigo-600 bg-gray-100 dark:bg-gray-900 m-auto hidden md:block" 
                 viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 
                     14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 
