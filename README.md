@@ -15,19 +15,19 @@ This project follows the tutorial available on YouTube:
 
 The tables present in the database are shown in the following diagram:
 
-<img alt="ticket form 1" 
+> <img alt="ticket form 1" 
 src="https://github.com/anmv921/cars-laravel/blob/master/readme_images/drawSQL-image-export-2025-01-24.png" 
 width="800px" />
 
 To access the features of the site we must first login into the website
 
-<img alt="ticket form 1" 
+> <img alt="ticket form 1" 
 src="https://github.com/anmv921/cars-laravel/blob/master/readme_images/login.png" 
 width="300px" />
 
 The main page is the "/cars" view:
 
-<img alt="ticket form 1" 
+> <img alt="ticket form 1" 
 src="https://github.com/anmv921/cars-laravel/blob/master/readme_images/cars.png" 
 width="500px" />
 
@@ -35,12 +35,12 @@ Here we can perform the CRUD operation by clicking on the links available on the
 
 We can create a new car:
 
-<img alt="ticket form 1" 
+> <img alt="ticket form 1" 
 src="https://github.com/anmv921/cars-laravel/blob/master/readme_images/create.png" 
 width="300px" />
 
 We can view the detailed car information:
 
-<img alt="ticket form 1" 
+> <img alt="ticket form 1" 
 src="https://github.com/anmv921/cars-laravel/blob/master/readme_images/show.png" 
 width="500px" />
