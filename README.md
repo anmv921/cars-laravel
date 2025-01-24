@@ -50,3 +50,28 @@ An update form is available:
 > <img alt="ticket form 1" 
 src="https://github.com/anmv921/cars-laravel/blob/master/readme_images/edit.png" 
 width="300px" />
+
+## Running the project
+
+In order to run the project we need to run the followind command, if we are running it
+for the first time.
+
+> composer install
+
+The file "laravel-cars.sql" can be imported into MySQL from the phpMyAdmin. 
+
+The following command allows us to install the required node packages, for example the Tailwind styles
+
+> npm install
+
+To compile the styles we can run:
+
+> npm run dev
+
+And in another terminal we can run:
+
+> php artisan serve --port=9999
+
+The page becomes available on the localhost address, on the port 9999
+
+> http://127.0.0.1:9999/
