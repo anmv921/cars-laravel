@@ -72,3 +72,5 @@ php artisan serve --port=9999      |
 php artisan key:generate
 
 php artisan config:cache
+
+this refreshes the config
