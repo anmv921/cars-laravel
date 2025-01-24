@@ -44,3 +44,9 @@ We can view the detailed car information:
 > <img alt="ticket form 1" 
 src="https://github.com/anmv921/cars-laravel/blob/master/readme_images/show.png" 
 width="500px" />
+
+An update form is available:
+
+> <img alt="ticket form 1" 
+src="https://github.com/anmv921/cars-laravel/blob/master/readme_images/edit.png" 
+width="300px" />
