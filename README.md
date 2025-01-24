@@ -17,4 +17,4 @@ The tables present in the database are show in the following diagram:
 
 <img alt="ticket form 1" 
 src="https://github.com/anmv921/cars-laravel/blob/master/readme_images/drawSQL-image-export-2025-01-24.png" 
-width="400px" />
+width="800px" />
