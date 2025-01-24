@@ -23,7 +23,7 @@ To access the features of the site we must first login into the website
 
 <img alt="ticket form 1" 
 src="https://github.com/anmv921/cars-laravel/blob/master/readme_images/login.png" 
-width="500px" />
+width="300px" />
 
 The main page is the "/cars" view:
 
@@ -37,7 +37,7 @@ We can create a new car:
 
 <img alt="ticket form 1" 
 src="https://github.com/anmv921/cars-laravel/blob/master/readme_images/create.png" 
-width="500px" />
+width="300px" />
 
 We can view the detailed car information:
 
